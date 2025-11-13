@@ -18,4 +18,18 @@ public class MyCollectionTest {
         coll.remove("b");
         assertEquals(2, coll.size());
     }
+
+    @Test
+    void emptyTest() {
+        MyCollection coll = new MyCollection(2);
+        coll.add("a");
+        coll.add("b");
+        assertEquals(2, coll.size());
+
+        coll.empty();
+        assertEquals(0, coll.size());
+
+        coll.add("new");
+        assertEquals(1, coll.size());
+    }
 }
