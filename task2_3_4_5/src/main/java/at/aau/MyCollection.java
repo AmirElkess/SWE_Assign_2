@@ -30,6 +30,7 @@ public class MyCollection {
     /**
      * Removes the String from the list. If the String is not in the list it throws an
      * IllegalArgumentException. If the list is empty it throws an IllegalArgumentException
+     *
      * @param s String to remove
      */
     public void remove(String s) throws IllegalArgumentException {
@@ -56,7 +57,7 @@ public class MyCollection {
      * Removes all items from the list and initializes a new list
      */
     public void empty() {
-
+        list = new String[list.length];
+        cursor = 0;
     }
-
 }
