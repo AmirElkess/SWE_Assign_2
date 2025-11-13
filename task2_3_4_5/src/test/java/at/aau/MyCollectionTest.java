@@ -3,6 +3,7 @@ package at.aau;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class MyCollectionTest {
     @Test
@@ -31,5 +32,19 @@ public class MyCollectionTest {
 
         coll.add("new");
         assertEquals(1, coll.size());
+    }
+
+
+    @Test
+    void removeFromEmptyTest() {
+        MyCollection coll = new MyCollection(1);
+        assertThrows(IllegalArgumentException.class, () -> coll.remove("y"));
+    }
+
+    @Test
+    void removeNonExistentTest() {
+        MyCollection coll = new MyCollection(1);
+        coll.add("x");
+        assertThrows(IllegalArgumentException.class, () -> coll.remove("y"));
     }
 }
