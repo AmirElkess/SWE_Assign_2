@@ -1,6 +1,6 @@
 **Initial tests coverage:**
 
-![img.png](img.png)
+![img.png](img_4.png)
 
 Adding the following edge-case tests increased coverage to 100%:
 
@@ -21,4 +21,4 @@ void removeNonExistentTest() {
 ```
 
 as follows:
-![img_1.png](img_1.png)
+![img_1.png](img_5.png)
